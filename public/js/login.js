@@ -1,6 +1,5 @@
 'use strict'
 
-
 let counter = 0;
 
 async function attempt_login () {
@@ -8,7 +7,7 @@ async function attempt_login () {
     let result = await fetch("/login_request", { method: "POST" });
     
     window.location.href = result.url;
-} 
+}
 
 window.onload = async function () {
     let login_button = document.getElementById("login-button");
