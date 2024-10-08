@@ -1,0 +1,56 @@
+body {
+    background:lightblue;
+    color:black;
+    border-color: red;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Gill Sans", sans-serif;
+    /* border: 2px solid red; */
+        
+    }
+
+    a, p {
+        font-family: "Nunito", sans-serif;
+    }
+  
+  table, th, tr, td {
+    border-collapse: collapse;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    border: 3px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  
+  /* flexbox used */
+  .flex{
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  /* class selectors selector, font definition */
+  .title {
+      font-family: "Gill Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      }
+  
+  
+    .nunito {
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        }
+  
+  /* id selector */
+  #dataTable {
+    background-color: aliceblue;
+    margin: auto;
+  }
+  
