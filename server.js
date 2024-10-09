@@ -89,6 +89,17 @@ app.post("/login", async (req, res) => {
     res.redirect("index.html");
   
   });
+
+// route to logout
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+      if (err) {
+          console.log(err);
+          return res.status(500).send("Could not log out.");
+      }
+      res.redirect("index.html"); // redirect to ?
+  });
+});
   
   app.get("/", (req, res) => {
     res.render("main", { msg: "", layout: false });
