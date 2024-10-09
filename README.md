@@ -4,5 +4,5 @@
 4. What challenges you faced in completing the project.
 5. What each group member was responsible for designing / developing.
 6. A link to your project video.
-7. 
+
 Think of 1,3, and 4 in particular in a similar vein to the design / tech achievements for A1—A4… make a case for why what you did was challenging and why your implementation deserves a grade of 100%.
