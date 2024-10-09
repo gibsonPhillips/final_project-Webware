@@ -1,56 +1,92 @@
 body {
-    background:lightblue;
-    color:black;
-    border-color: red;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Gill Sans", sans-serif;
-    /* border: 2px solid red; */
-        
-    }
+  background:lightblue;
+  color:black;
+}
 
-    a, p {
-        font-family: "Nunito", sans-serif;
-    }
-  
-  table, th, tr, td {
-    border-collapse: collapse;
-    font-family: "Nunito", sans-serif;
-    font-size: 14px;
-    border: 3px solid black;
-    padding: 5px;
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gill Sans", sans-serif;
   }
-  
-  
-  /* flexbox used */
-  .flex{
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-  
+
+  a, p {
+    font-family: "Gill Sans", sans-serif;
   }
-  
-  /* class selectors selector, font definition */
-  .title {
-      font-family: "Gill Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      }
-  
-  
-    .nunito {
-        font-family: "Nunito", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        }
-  
-  /* id selector */
-  #dataTable {
-    background-color: aliceblue;
-    margin: auto;
-  }
-  
+
+.flex{
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+header, footer {
+  background-color: lightgray;
+  font-family: "Gill Sans", sans-serif;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid black;
+  margin-bottom: 20px;
+}
+
+
+/*links*/
+a:link {
+  color: lavender;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lavender;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightskyblue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+footer a:link,
+footer a:visited {
+color: blue; /* Make footer links blue */
+background-color: transparent;
+text-decoration: none;
+}
+
+footer a:hover {
+color: darkblue; /* Darker blue when hovered */
+text-decoration: underline; /* Underline on hover */
+}
+
+a[href="/views/register.html"] {
+color: blue; /* Change link color to blue */
+text-decoration: none; /* Remove underline if you want */
+}
+
+a[href="/views/register.html"]:hover {
+color: darkblue; /* Darker blue on hover */
+text-decoration: underline; /* Underline on hover for visual feedback */
+}
+
+
+.button {
+
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+border-radius: 5px;
+}
+
