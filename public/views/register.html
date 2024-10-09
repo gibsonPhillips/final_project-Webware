@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>WWPI Radio - Home</title>
+
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/register.js" defer></script>
+
+  <!--Icons-->
+  <script src="https://kit.fontawesome.com/e87d1030ee.js" crossorigin="anonymous"></script>
+
+  <!-- get rid of favicon error -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+</head>
+
+<body>
+
+  <header>
+    <h1>WWPI Radio</h1>
+    <nav>
+      <ul class="nav-list">
+        <li class="button"><a href="/../index.html">Home</a></li>
+        <li class="button"><a href="/views/services.html">Services</a></li>
+        <li class="button"><a href="/views/bookEvent.html">Book an Event</a></li>
+        <li class="button"><a href="/views/requestShow.html">Request your own Show</a></li>
+        <li class="button"><a href="/views/memberInfo.html">Member Information</a></li>
+        <li class="button"><a href="/views/viewUsers.html">Active Users</a></li>
+        <li class="button"><a href="/views/viewEvents.html">Published Events</a></li>
+        <li class="button"><a href="/views/inbox.html">Inbox</a></li>
+        <!--Anchor Link to footer-->
+        <li class="button"><a href="#contactus">Contact Us</a></li>
+        <li class="button"><a href="/views/login.html">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form target="dummyframe">
+        <section>
+            <label for="username">Username: </label>
+            <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+        </section>
+        <section>
+            <label for="first-name">First Name: </label>
+            <input id="first-name" name="first-name" type="text" autocomplete="first-name" required autofocus>
+        </section>
+        <section>
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" name="last-name" type="text" autocomplete="last-name" required autofocus>
+        </section>
+        <section>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+        </section>
+        <section>
+            <label for="id">ID: </label>
+            <input id="id" name="id" required>
+        </section>
+        <section>
+            <label for="password">Password: </label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </section>
+        <section>
+            <label for="confirm-password">Confirm Password: </label>
+            <input id="confirm-password" name="password" type="password" autocomplete="current-password" required>
+        </section>
+        <button id="register-button" type="button">Complete Registration</button>
+    </form>
+</body>
+
+</html>

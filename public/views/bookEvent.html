@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WWPI Radio - Book an Event</title>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/book_event.js" defer></script>
+
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/e87d1030ee.js" crossorigin="anonymous"></script>
+
+    <!-- get rid of favicon error -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+</head>
+
+<body>
+    
+  <header>
+    <h1>WWPI Radio</h1>
+    <nav>
+      <ul class="nav-list">
+        <li class="button"><a href="/../index.html">Home</a></li>
+        <li class="button"><a href="/views/services.html">Services</a></li>
+        <li class="button"><a href="/views/bookEvent.html">Book an Event</a></li>
+        <li class="button"><a href="/views/requestShow.html">Request your own Show</a></li>
+        <li class="button"><a href="/views/memberInfo.html">Member Information</a></li>
+        <li class="button"><a href="/views/viewUsers.html">Active Users</a></li>
+        <li class="button"><a href="/views/viewEvents.html">Published Events</a></li>
+        <li class="button"><a href="/views/inbox.html">Inbox</a></li>
+        <!--Anchor Link to footer-->
+        <li class="button"><a href="#contactus">Contact Us</a></li>
+        <li class="button"><a href="/views/login.html">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+    <main>
+        <h1>Book an Event</h1>
+        <form>
+            <label for="fname">First name:</label>
+            <input required type="text" id="fname" name="fname">
+
+            <label for="lname">Last name:</label>
+            <input required type="text" id="lname" name="lname">
+
+            <label for="email">Email:</label>
+            <input required type="email" id="email" name="email">
+
+            <label for="studentid">WPI Student ID:</label>
+            <input required type="text" id="studentid" name="studentid">
+
+            <label for="organization">Organization:</label>
+            <input required type="text" id="organization" name="organization">
+
+            <label for="date">Date of Event:</label>
+            <input required type="date" id="date" name="date">
+
+            <label for="starttime">Start Time:</label>
+            <input required type="text" id="starttime" name="starttime">
+
+            <label for="endtime">End Time:</label>
+            <input type="text" id="endtime" name="endtime">
+
+            <label for="speaker">Speakers:</label>
+            <select required id="speaker">
+                <option>Choose...</option>
+                <option value="large">Large ($150)</option>
+                <option value="small">Small ($125)</option>
+            </select>
+
+            <label for="other">Other Details/Requests</label>
+            <input type="text" id="other" name="other">
+
+            <!--reCAPTCHA-->
+
+            <button>Submit</button>
+
+        </form>
+    </main>
+
+    <br><br><br><br>
+    <footer>
+        <div class="contactus">
+            <h3>Contact Us</h3>
+
+            <p><a href="mailto:radio-execs@wpi.edu">radio-execs@wpi.edu</a> | <a href="tel:+5038315956">(508)
+                    831-5956</a></p>
+            <p>Rubin Campus Center Room 329</p>
+        </div>
+
+        <div class="icons">
+            <!--https://docs.fontawesome.com/web/style/styling-->
+            <a href="https://twitter.com/wwpiradio"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.instagram.com/wwpiradioclub"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.facebook.com/wwpiradioclub"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
