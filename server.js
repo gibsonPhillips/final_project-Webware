@@ -2,6 +2,15 @@ const express = require("express");
 const cookie = require("cookie-session");
 const path = require("path");
 
+
+async function pull_from_db() {
+  // TODO IMPL
+}
+
+async function push_to_db() {
+  // TODO IMPL
+}
+
 let shows = {
   "show_title": { "date": 'mmddyyyy', "time": '00:00', "description": 'desc' }
 };
@@ -32,27 +41,32 @@ app.post("/follow", async function (req, res) {
     // Look I know this is horrible... its late and I am speedrunning I am sorry ;-;
     payload = JSON.parse(payload);
     if(req.session.login) {
+      await pull_from_db()
       if(Object.hasOwn(users, payload.username)) {
         if(!(req.session.username in users[payload.username].followed_by)) {
           users[payload.username].followed_by.push(req.session.username);
+          await push_to_db()
         }
       }
     }
 
-    console.log(users);
     res.end();
   });
 });
 
 app.post("/fetch_inbox", async function (req, res) {
+  await pull_from_db();
   res.json({"inbox": users[req.session.username].inbox});
 });
 
 app.post("/fetch_shows", async function (req, res) {
+  await pull_from_db();
   res.json(shows);
 });
 
 app.post("/fetch_users", async function (req, res) {
+
+  await pull_from_db();
 
   let usernames = []
   for(let user in users) {
@@ -71,6 +85,7 @@ app.post("/register_request", async function (req, res) {
 
   req.on('end', async function () {
     payload = JSON.parse(payload);
+    await pull_from_db()
     if(!Object.hasOwn(users, payload.username)) {
       users[payload.username] = {
         "password": payload.password,
@@ -82,6 +97,7 @@ app.post("/register_request", async function (req, res) {
         "inbox": [], 
         "owned_events": []
       }
+      await push_to_db()
     } else {
       // TODO respond with error
     }
@@ -100,6 +116,7 @@ app.post("/request_show", async function (req, res) {
 
   req.on('end', async function () {
     payload = JSON.parse(payload);
+    await pull_from_db()
     if(!Object.hasOwn(shows, payload.title)) {
       shows[payload.title] = {
         "date": payload.date,
@@ -115,6 +132,7 @@ app.post("/request_show", async function (req, res) {
           "title": payload.title,
         });
       }
+      await push_to_db()
     }
 
     res.end();
@@ -129,11 +147,18 @@ app.post("/login_request", async function (req, res) {
 
   req.on('end', async function () {
     payload = JSON.parse(payload)
+    
+    await pull_from_db()
+    
     if(req.session.login) {
       req.session.login = false;
     } else {
-      req.session.login = true;
-      req.session.username = payload.username;
+      if(Object.hasOwn(users, payload.username) && payload.password === users[payload.username].password) 
+      {
+        console.log("Worked!");
+        req.session.login = true;
+        req.session.username = payload.username;
+      }
     }
         
     res.redirect("index.html");
