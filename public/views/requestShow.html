@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/js/main.js" defer></script>
+    <script src="/js/request_show.js" defer></script>
 
     <!--Icons-->
     <script src="https://kit.fontawesome.com/e87d1030ee.js" crossorigin="anonymous"></script>
@@ -25,11 +25,14 @@
         <h1>WWPI Radio</h1>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="bookEvent.html">Book an Event</a></li>
-                <li><a href="requestShow.html">Request your own Show</a></li>
-                <li><a href="memberInfo.html">Member Information</a></li>
+                <li><a href="/../index.html">Home</a></li>
+                <li><a href="/views/services.html">Services</a></li>
+                <li><a href="/views/bookEvent.html">Book an Event</a></li>
+                <li><a href="/views/requestShow.html">Request your own Show</a></li>
+                <li><a href="/views/memberInfo.html">Member Information</a></li>
+                <li><a href="/views/viewUsers.html">Active Users</a></li>
+                <li><a href="/views/viewEvents.html">Published Events</a></li>
+                <li><a href="/views/inbox.html">Inbox</a></li>
                 <!--Anchor Link to footer-->
                 <li><a href="#contactus">Contact Us</a></li>
             </ul>
@@ -39,26 +42,19 @@
     <main>
         <h1>Radio Show Application</h1>
         <form>
-            <label for="fname">First name:</label>
-            <input required type="text" id="fname" name="fname">
-
-            <label for="lname">Last name:</label>
-            <input required type="text" id="lname" name="lname">
-
-            <label for="email">Email:</label>
-            <input required type="email" id="email" name="email">
-
             <label for="showtitle">Show Title:</label>
             <input type="text" id="showtitle" name="showtitle">
 
-            <label for="time">Time Slot:</label>
-            <input required type="text" id="time" name="time">
+            <label for="date">Date:</label>
+            <input required type="date" id="date" name="date">
+
+            <label for="time">Time:</label>
+            <input required type="time" id="time" name="time">
 
             <label for="description">Description:</label>
             <input type="text" id="description" name="description">
 
-            <button>Submit</button>
-
+            <button id="submit-button" type="button">Submit</button>
         </form>
 
     </main>

@@ -5,12 +5,11 @@
   "scripts": {
     "start": "node server.js"
   },
-  
   "dependencies": {
-    "mime": "^4.0.4",
+    "cookie-session": "^2.1.0",
     "express": "^4.21.0",
-    "mongodb": "^6.9.0",
-    "cookie-session": "^2.1.0"
+    "mime": "^4.0.4",
+    "mongodb": "^6.9.0"
   },
   "engines": {
     "node": "16.x"
