@@ -1,4 +1,4 @@
-//const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config()
 const express = require("express"),
       { MongoClient, ObjectId } = require("mongodb"),
       cookie = require("cookie-session"),
@@ -24,9 +24,15 @@ const client = new MongoClient( uri )
 
 let collection = null
 
+let shows = {};
+
+let users = {};
+
 async function run() {
   await client.connect()
   collection = await client.db("datatest").collection("test")
+
+  await pull_from_db();
 }
 
 run()
@@ -75,7 +81,6 @@ app.post( '/update', async (req,res) => {
 
 // route to login  
 app.post("/login", async (req, res) => {
-    console.log(req.body);
     const verify = await collection.findOne({
       username: req.body.username,
       password: req.body.password,
@@ -89,40 +94,20 @@ app.post("/login", async (req, res) => {
   
   });
 
-// const express = require("express");
-// const cookie = require("cookie-session");
-// const path = require("path");
-
-
 async function pull_from_db() {
-  // TODO IMPL
+  let userdata = await collection.findOne({type: "server_users"});
+  let showdata = await collection.findOne({type: "server_shows"});
+
+  users = userdata.data;
+  shows = showdata.data;
 }
 
 async function push_to_db() {
-  // TODO IMPL
+  await collection.updateOne({type: "server_users"}, { $set: {data: users} })
+  await collection.updateOne({type: "server_shows"}, { $set: {data: shows} })
 }
 
-let shows = {
-  "show_title": { "date": 'mmddyyyy', "time": '00:00', "description": 'desc' }
-};
-
-let users = {
-  "username": { "password": 'password123', "first_name": 'first_name', "last_name": 'last_name', "email": 'email@wpi.edu', "id": '000000000', "followed_by": [], "inbox": [], "owned_events": ["show_title"] }
-};
-
-// app = express();
-
-// app.use(
-//     cookie({
-//       name: "session",
-//       keys: ["verysecurekey(noitsnot)", "itssupersecureipromise"],
-//     })
-// );
-
-// app.use(express.static("./public"));
-
 app.post("/follow", async function (req, res) {
-
   let payload = ''
   req.on('data', function( data ) {
     payload += data 
@@ -246,7 +231,6 @@ app.post("/login_request", async function (req, res) {
     } else {
       if(Object.hasOwn(users, payload.username) && payload.password === users[payload.username].password) 
       {
-        console.log("Worked!");
         req.session.login = true;
         req.session.username = payload.username;
       }
