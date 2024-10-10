@@ -23,7 +23,7 @@ A user must register for or login in to there account to see a lot of informatio
 - Mongodb - User information (username, password, name, email, inbox, id, followers, owned events) and shows (show title, host, date, time, description)
 - HTML - Structure of pages
 - CSS - Styling of pages
-- JS - Used for dynamic behavior and client/server interations
+- JS - Used for dynamic behavior and client/server interactions
 - Fontawesome - Icons to link to the clubs social media accounts
 - Github - code organization and collaboration
 - Glitch - final deployment of project
