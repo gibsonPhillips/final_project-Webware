@@ -23,16 +23,16 @@ paragraph 2
 ## User Instructions
 
 ## Technologies
-- Cookies
-- Express
-- Express-handlebars
-- Mongodb
-- HTML
-- CSS
-- JS
-- Fontawesome
-- Github
-- Glitch
+- Cookies - implemented cookies to allow users to log on and stay logged on for the session
+- Express - implemented express to help handle the server side JS
+- Express-handlebars - implemented for login pages
+- Mongodb - User information (username, password, name, email, inbox, id, followers, owned events) and shows (date, time, description)
+- HTML - Structure of pages
+- CSS - Styling of pages
+- JS - Used for dynamic behavior and client/server interations
+- Fontawesome - Icons to link to the clubs social media accounts
+- Github - code organization and collaboration
+- Glitch - final deployment of project
 
 ## Challenges
 
@@ -44,6 +44,7 @@ paragraph 2
 
 **April Bollinger**
 - Structural HTML
+- Package.json
 - Icons, Links and video embedding
 - Deployment
 
