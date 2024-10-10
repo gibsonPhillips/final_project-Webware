@@ -91,7 +91,6 @@ app.post("/login", async (req, res) => {
     
     req.session.login = true;
     res.redirect("index.html");
-  
   });
 
 async function pull_from_db() {
@@ -179,7 +178,7 @@ app.post("/register_request", async function (req, res) {
     }
 
     // TODO update database
-    res.end();
+    res.redirect("index.html");
   });
 });
 
@@ -211,7 +210,7 @@ app.post("/request_show", async function (req, res) {
       await push_to_db()
     }
 
-    res.end();
+    res.redirect("index.html");
   });
 });
 

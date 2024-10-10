@@ -25,6 +25,8 @@ async function register_user () {
             email
         }) 
     });
+
+    window.location.href = result.url;
 }
 
 window.onload = async function () {

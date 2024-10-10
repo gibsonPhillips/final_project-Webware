@@ -23,5 +23,7 @@ window.onload = async function () {
                 description
             })
         });
+
+        window.location.href = result.url;
     }
 }
