@@ -34,6 +34,7 @@ A user must register for or login in to there account to see a lot of informatio
 - Addressing Accessibility concerns using color contrast and HTML for screen readers
 - Using MongoDB to allow for followers
 - File Organization - We have a lot of files with different fuctionality
+- Used CRAP design principles - used contrast to ensure our elements stand out from each other, repition on similar elements, alignment to relate elements visually, and kept related content within close proximity of each other.
 
 
 ## Team Contributions
