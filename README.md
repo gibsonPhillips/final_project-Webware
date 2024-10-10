@@ -6,27 +6,20 @@
 - Gibson Phillips
 - Jonathan Asher
 
-1. A brief description of what you created, and a link to the project itself (two paragraphs of text)
-2. Any additional instructions that might be needed to fully use your project (login information etc.)
-3. An outline of the technologies you used and how you used them.
-4. What challenges you faced in completing the project.
-
-
-Think of 1,3, and 4 in particular in a similar vein to the design / tech achievements for A1—A4… make a case for why what you did was challenging and why your implementation deserves a grade of 100%.
-
+[https://finalproject-group1.glitch.me/](https://finalproject-group1.glitch.me/)
 
 ## Project Description
-We created a proof of concept website for the current WPI radio club.
-
-paragraph 2
+Our goal was to create a dynamic website to serve as a proof of concept for the WPI on-campus Amateur Radio Club. The current [WWPI website](https://wwpiradioexecs.wixsite.com/wwpi) is depreciated and lacks some functionality that we implemented.
+Our website allows for the creation of user accounts to personalize user experiences. A user can view the services the WWPI club provides, book an event, request to have their own show, view member training information, view other users and follow them, view published events, and access inbox messages.
 
 ## User Instructions
+A user must register for or login in to there account to see a lot of information or use the forms.
 
 ## Technologies
 - Cookies - implemented cookies to allow users to log on and stay logged on for the session
 - Express - implemented express to help handle the server side JS
 - Express-handlebars - implemented for login pages
-- Mongodb - User information (username, password, name, email, inbox, id, followers, owned events) and shows (date, time, description)
+- Mongodb - User information (username, password, name, email, inbox, id, followers, owned events) and shows (show title, host, date, time, description)
 - HTML - Structure of pages
 - CSS - Styling of pages
 - JS - Used for dynamic behavior and client/server interations
@@ -35,6 +28,12 @@ paragraph 2
 - Glitch - final deployment of project
 
 ## Challenges
+- Importing and using fontawesome icons
+- Dynamic Inbox - Using the DB for the dynamic inbox makes the DB weak against race conditions (multiple users)
+- Addressing Accessibility concerns using color contrast and HTML for screen readers
+- Using MongoDB to allow for followers
+- File Organization - We have a lot of files with different fuctionality
+
 
 ## Team Contributions
 **Abbey Kratman**
