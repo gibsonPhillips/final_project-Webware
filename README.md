@@ -9,7 +9,7 @@
 [https://finalproject-group1.glitch.me/](https://finalproject-group1.glitch.me/)
 
 ## Project Description
-Our goal was to create a dynamic website to serve as a proof of concept for the WPI on-campus Amateur Radio Club. The current [WWPI website](https://wwpiradioexecs.wixsite.com/wwpi) is depreciated and lacks some functionality that we implemented.
+Our goal was to create a dynamic website to serve as a proof of concept for the WPI on-campus Amateur Radio Club. The WPII radio club hosts weekly shows and various on-campus activites beyond what the current site shows. The current [WWPI website](https://wwpiradioexecs.wixsite.com/wwpi) is depreciated and lacks some functionality that we implemented.
 
 Our website allows for the creation of user accounts to personalize user experiences. A user can view the services the WWPI club provides, book an event, request to have their own show, view member training information, view other users and follow them, view published events, and access inbox messages.
 
