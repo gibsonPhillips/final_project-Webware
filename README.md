@@ -1,5 +1,5 @@
 # WWPI Radio Club
-### Team Members
+### Collaberators
 - Abbey Kratman
 - April Bollinger
 - Arayah Remillard
